@@ -3,13 +3,11 @@ function RandomNum() {
   const [randomnum, setrandomnum] = useState(null);
   const [mode, setmode] = useState(true);
 
-  const handleGenerate = (event) => {
-    event.preventDefault();
+  const handleGenerate = () => {
     const generateNum = Math.floor(Math.random() * 100) + 1;
     setrandomnum(generateNum);
   };
-  const handleMode = (event) => {
-    event.preventDefault();
+  const handleMode = () => {
     setmode(!mode);
   };
   return (
